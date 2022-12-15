@@ -1,0 +1,14 @@
+.categories{
+    width: fit-content;
+    padding: 8px 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 5px 13px;
+    height: fit-content;
+}
+
+.categories:hover{
+    color:white;
+    background-color: black;
+    cursor: pointer;
+}

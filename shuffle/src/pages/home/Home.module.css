@@ -1,0 +1,12 @@
+.container{
+    background-color: rgb(51, 51, 213);
+    height: 100vh;
+}
+
+.inner{
+    height: 60vh;
+    border-radius: 0 0 30px 30px;
+    background-color: white;
+    padding: 50px 100px;
+    display: flex;
+}
