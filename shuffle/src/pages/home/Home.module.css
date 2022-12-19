@@ -4,9 +4,21 @@
 }
 
 .inner{
-    height: 60vh;
+    height: 70vh;
     border-radius: 0 0 30px 30px;
     background-color: white;
-    padding: 50px 100px;
+    padding: 50px 150px;
+}
+
+.nav1{
     display: flex;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+}
+
+.inner:last-child{
+    margin-left:auto;
 }

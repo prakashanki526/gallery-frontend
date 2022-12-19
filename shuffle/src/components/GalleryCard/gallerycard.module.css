@@ -1,0 +1,23 @@
+.imagecard{
+    margin-top: 35px;
+    margin-right: 40px;
+    margin-left: 15px;
+    display: inline-block;
+    /* border: 2px solid red; */
+    height: 40vh;
+    width: 18%;
+}
+
+.image img{
+   height:32vh;
+   width: 100%; 
+   border-radius: 10px;
+}
+
+.imageinfo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-weight: bolder;
+    /* background-color: aqua; */
+}
