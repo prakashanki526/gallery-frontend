@@ -1,14 +1,27 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "./category.module.css";
-// import {getCategories} from "../../api/discover";
+import {getCategories} from "../../api/discover";
 
 
 const Category = () => {
+    const [categoryList, setCategoryList] = useState([]);
+    
+    async function fetchCategories(){
+        const categoryData = await getCategories();
+        setCategoryList(categoryData);
+    }
+    
+    useEffect(()=>{
+        fetchCategories();
+    },[]);
+
     return (
         <>
-        <div className={styles.categories}>
-            Category 1
-        </div>
+        {categoryList.map((category,index)=>{
+            return(
+                <div className={styles.categories}>{category.name}</div>
+            );
+        })}
        
         </>
     );

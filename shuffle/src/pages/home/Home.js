@@ -11,9 +11,6 @@ const Home = () => {
                 <div className={styles.nav1}>
                     <div className={styles.nav}>
                         <Category />
-                        <Category />
-                        <Category />
-                        <Category />
                     </div>
                     <div>
                         <Filter />
