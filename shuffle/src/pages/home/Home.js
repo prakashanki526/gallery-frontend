@@ -17,9 +17,6 @@ const Home = () => {
                     </div>
                 </div>
                 <GalleryCard />
-                <GalleryCard />
-                <GalleryCard />
-                <GalleryCard />
             </div>
             <Shuffle />
         </div>
