@@ -7,13 +7,13 @@ import {useNavigate, useParams} from "react-router-dom";
 const Category = () => {
     const navigate = useNavigate();
     let {categoryName} = useParams();
-
+    
     const [categoryList, setCategoryList] = useState([]);
     
     async function fetchCategories(){
         const categoryData = await getCategories();
-        setCategoryList(categoryData);
-
+        await setCategoryList(categoryData);
+        
         if (!categoryName) {
             const defaultCategory = categoryList[0];
             const defaultCategoryName = defaultCategory.name;

@@ -5,7 +5,7 @@ import {useParams, useSearchParams} from "react-router-dom";
 import { getImages } from "../../api/discover";
 
 const GalleryCard = () => {
-    const [imageDataList, setImageDataList] = useState([[]]);
+    const [imageDataList, setImageDataList] = useState([]);
     const {categoryName} = useParams();
     let sortByDate;
     let filterByLike;
@@ -28,7 +28,6 @@ const GalleryCard = () => {
 
     return (
         <>
-        {console.log(imageDataList)}
         {imageDataList.length && imageDataList.map((imageData,index)=>
          <div key={index} className={styles.imagecard}>
                 <div className={styles.image}>
@@ -36,7 +35,7 @@ const GalleryCard = () => {
                 </div>
                 <div className={styles.imageinfo}>
                     <div>
-                        <i class='far fa-heart' style={{fontSize: 26}}></i>
+                        <i class='fa fa-heart' style={{fontSize: 26, color: imageData.likes?"red":"grey"}}></i>
                     </div>
                     <div>
                         {imageData.name}

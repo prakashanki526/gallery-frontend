@@ -8,11 +8,12 @@ export async function getCategories() {
     }
 }
 
-export async function getImages(categoryName,sortByDate,filterByLike){
-    const reqUrl = `https://photogallery-prakashankit.onrender.com/discover/api?category=nature`;
+export async function getImages(categoryName,sortByDate=null,filterByLike=null){
+    const reqUrl = `https://photogallery-prakashankit.onrender.com/discover/api?category=${categoryName}&sortByDate=${sortByDate}&filterByLike=${filterByLike}`;
     const result = await axios.get(reqUrl);
     if(result.data){
-        console.log(result.data[0]);
-        return (result.data);
+        return (result.data.galleryDetails);
     }
 }
+
+// export async function toggleLike()
