@@ -7,6 +7,8 @@ import {useNavigate, useParams} from "react-router-dom";
 const Category = () => {
     const navigate = useNavigate();
     let {categoryName} = useParams();
+
+    const [selected, setSelected] = useState();
     
     const [categoryList, setCategoryList] = useState([]);
     
@@ -18,6 +20,7 @@ const Category = () => {
             const defaultCategory = categoryList[0];
             const defaultCategoryName = defaultCategory.name;
             navigate(`/${defaultCategoryName}`);
+            setSelected(defaultCategoryName);
         }
     }
     
@@ -26,6 +29,7 @@ const Category = () => {
     },[]);
 
     function navigateCategory(categoryName){
+        setSelected(categoryName);
         navigate(`/${categoryName}`);
     }
 
@@ -33,7 +37,7 @@ const Category = () => {
         <>
         {categoryList.map((category,index)=>{
             return(
-                <div key={index} onClick={()=>navigateCategory(category.name)} className={styles.categories}>{category.name}</div>
+                <div key={index} onClick={()=>navigateCategory(category.name)} className={category.name===selected ?styles.selectedCat:styles.categories}>{category.name}</div>
             );
         })}
        

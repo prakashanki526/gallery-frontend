@@ -1,3 +1,7 @@
+.contents{
+    display: flex;
+}
+
 .categories{
     width: fit-content;
     padding: 8px 30px;
@@ -8,7 +12,16 @@
 }
 
 .categories:hover{
-    color:white;
-    background-color: black;
     cursor: pointer;
+}
+
+.selectedCat{
+    width: fit-content;
+    padding: 8px 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 5px 15px;
+    height: fit-content;
+    background-color: black;
+    color: white;
 }
